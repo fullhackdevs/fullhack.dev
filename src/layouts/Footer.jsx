@@ -5,7 +5,6 @@ const Wrapper = styled.footer`
   position: relative;
   padding-top: 2rem;
   bottom: 0;
-  box-shadow: ${props => props.theme.shadow.footer};
   background: ${props => props.theme.gradient.leftToRight};
   font-family: ${props => props.theme.fontFamily.body};
   font-weight: 500;
@@ -25,8 +24,10 @@ const Footer = () => (
   <Wrapper>
     <Text>
       <span>
-        Gatsby Tutorial Starter -{' '}
-        <a href="https://justinformentin.com">Justin Formentin</a>
+        Full Hack Developers{' | '}
+        <a href="https://nickvh.tech">Nicholas Vincent-Hill</a>
+        {' | '}
+        <a href="http://delamadrid.tech/">Fernando De La Madrid</a>
       </span>
     </Text>
   </Wrapper>
