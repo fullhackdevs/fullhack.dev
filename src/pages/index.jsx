@@ -25,7 +25,7 @@ const Index = ({ data }) => {
   return (
     <Layout>
       <Helmet title={'Home Page'} />
-      <Header title="Home Page">Gatsby Tutorial Starter</Header>
+      <Header title="">The Full Hack Developer Podcast</Header>
       <PostWrapper>
         {edges.map(({ node }) => (
           <PostList
