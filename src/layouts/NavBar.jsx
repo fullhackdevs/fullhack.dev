@@ -18,7 +18,7 @@ const Nav = styled.nav`
   font-size: 1.1rem;
   align-items: center;
   a {
-    color: ${props => props.theme.colors.white.base};
+    color: ${({ theme }) => theme.colors.primary.yellow};
     margin-left: 2rem;
     transition: all ${props => props.theme.transitions.default.duration};
     &:hover {
@@ -27,16 +27,21 @@ const Nav = styled.nav`
   }
 `;
 
+const links = [
+  { text: 'HOME', path: '/' },
+  { text: 'EPISODES', path: '/blog' },
+  { text: 'ABOUT', path: '/about' },
+];
+
+const renderLinks = links =>
+  links.map(link => <Link to={link.path}>{link.text}</Link>);
+
 const NavBar = () => (
   <Headroom calcHeightOnResize disableInlineStyles>
     <StyledLink to="/">
-      <img src={logo} alt="Gatsby Logo" />
+      <img src={logo} width="100px" hight="100px" alt="Fullhack Dev Logo" />
     </StyledLink>
-    <Nav>
-      <Link to="/">Home</Link>
-      <Link to="/blog">Episodes</Link>
-      <Link to="/about">About</Link>
-    </Nav>
+    <Nav>{renderLinks(links)}</Nav>
   </Headroom>
 );
 
